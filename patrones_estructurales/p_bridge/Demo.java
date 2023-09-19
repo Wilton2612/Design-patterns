@@ -9,13 +9,15 @@ public class Demo {
     public static void main(String[] args) {
         
         Motor motorGasolina = new Gasolina();
-        Vehiculo ford = new Ford(motorGasolina, "Tijera", "Grande");
-        ford.mostrarCaracteristicas();
+        Vehiculo ford = new Ford(motorGasolina);
+        ford.acelerar(2.7);
+        ford.frenar();
+
 
         System.out.println("############################");
         Motor motorDiesel = new Diesel();
-        Vehiculo mazda = new Mazda(motorDiesel, "Tijera", "Grande");
-        mazda.mostrarCaracteristicas();
+        Vehiculo mazda = new Mazda(motorDiesel);
         mazda.acelerar(2.9);
+        mazda.frenar();
     }
 }

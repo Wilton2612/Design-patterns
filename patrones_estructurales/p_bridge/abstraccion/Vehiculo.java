@@ -4,7 +4,7 @@ import patrones_estructurales.p_bridge.implementacion.Motor;
 
 public abstract class Vehiculo {
     
-    private Motor motor;
+    protected Motor motor;
 
     public Vehiculo(Motor motor)
     {
@@ -12,16 +12,11 @@ public abstract class Vehiculo {
         this.motor = motor;
     }
 
-    public void acelerar(double combustible){
-
-        motor.sumunistrarCombustible(combustible);
-        motor.consumirCombustible();
-    }
-
-    public void frenar(){
-        System.out.println("El vehiculo está frenando");
-    }
 
 
-    public abstract void mostrarCaracteristicas();
+    public abstract void acelerar(double combustible);
+       
+    
+
+    public abstract void frenar();
 }
